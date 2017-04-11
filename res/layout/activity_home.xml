@@ -1,0 +1,175 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/music_note"
+    android:orientation="vertical"
+    android:weightSum="100" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:background="#003300"
+        android:padding="5dp"
+        android:orientation="horizontal"
+        android:weightSum="100" >
+
+        <CheckBox
+            android:id="@+id/usesensor"
+            android:layout_width="0dp"
+            android:layout_weight="40"
+            android:layout_height="wrap_content"
+            android:text="Use Sensor" 
+            android:textColor="#ffffff"
+            android:layout_marginTop="10dp"/>
+        <View 
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="40"
+            />
+
+        <Button
+            android:id="@+id/songsMenu"
+            android:layout_width="0dp"
+            android:layout_weight="15"
+            
+            android:layout_height="wrap_content"
+            android:background="@drawable/images"
+            android:layout_gravity="right"
+            android:onClick="authorInfo"
+            
+            />
+        
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0pt"
+        android:layout_weight="65"
+        android:background="#50ffffff"
+        android:orientation="vertical" 
+        android:weightSum="65">
+		
+        <ListView
+            android:id="@+id/songsList"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="65"
+            android:background="#55008000"
+            >
+            
+        </ListView>
+        
+    </LinearLayout>
+
+    
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0pt"
+        android:layout_weight="12"
+        android:orientation="vertical"
+        android:background="#003300"
+        android:weightSum="17" >
+		<LinearLayout
+		    android:layout_width="match_parent"
+	        android:layout_height="0pt"
+	        android:layout_weight="9"
+	        android:orientation="horizontal"
+	        android:weightSum="10" >
+		    
+	        <TextView
+	            android:id="@+id/timer1"
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="5"
+	            android:text="TextView"
+	            android:textColor="#ffffff"
+	            android:textSize="18sp" 
+	           
+	           
+	           />
+	        <TextView
+	            android:id="@+id/timer2"
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="5"
+	            android:text="TextView"
+	            android:textColor="#ffffff"
+	            android:textSize="18sp" 
+	            />
+			</LinearLayout>
+        <SeekBar
+            android:id="@+id/seekBar1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8" />
+
+    </LinearLayout>
+    
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="13"
+        android:background="#003300"
+        android:padding="5dp"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        >
+
+        <Button
+            android:id="@+id/exitButton"
+            android:layout_width="0pt"
+            android:layout_weight="20"
+            android:layout_height="wrap_content" 
+            android:background="@drawable/exit"
+            android:onClick="exit"
+            />
+
+        <Button
+            android:id="@+id/prevButton"
+            android:layout_width="0pt"
+            android:layout_weight="20"
+            android:layout_height="wrap_content"
+            android:background="@drawable/prev" 
+            android:onClick="prevMusic"
+           />
+
+        <Button
+            android:id="@+id/playButton"
+            android:layout_width="0pt"
+            android:layout_weight="20"
+            android:layout_height="wrap_content"
+            android:background="@drawable/play"
+            android:visibility="visible"
+            android:onClick="playMusic"
+             />
+		
+        <Button
+            android:id="@+id/pauseButton"
+            android:layout_width="0pt"
+            android:layout_weight="20"
+            android:layout_height="wrap_content"
+            android:background="@drawable/pause"
+            android:visibility="gone"
+            android:onClick="pauseMusic"
+             />
+        <Button
+            android:id="@+id/nextButton"
+            android:layout_width="0pt"
+            android:layout_weight="20"
+            android:layout_height="wrap_content"
+            android:background="@drawable/next"
+            android:onClick="nextMusic"
+            />
+
+        <Button
+            android:id="@+id/stopButton"
+            android:layout_width="0pt"
+            android:layout_weight="20"
+            android:layout_height="wrap_content"
+            android:background="@drawable/stop" 
+            android:onClick="stopMusic"
+            />
+        
+    </LinearLayout>
+</LinearLayout>
